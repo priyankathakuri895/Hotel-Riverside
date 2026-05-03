@@ -19,9 +19,21 @@
 
                 <p>Luxury Stay • Nature Escape • Premium Comfort</p>
 
-                <a href="/booking" class="btn btn-warning btn-lg px-4 mt-3">
-                    Book Now
-                </a>
+                @auth
+
+                    <a href="{{ route('booking') }}"
+                    class="btn btn-warning btn-lg px-4 mt-3">
+                        Book Now
+                    </a>
+
+                @else
+
+                    <a href="{{ route('login') }}"
+                    class="btn btn-warning btn-lg px-4 mt-3">
+                        Login to Book
+                    </a>
+
+                @endauth
 
             </div>
 
@@ -99,9 +111,20 @@
 
             <div class="col-md-3">
                 <label class="small text-muted">Action</label>
-                <button class="btn btn-warning w-100 text-white">
-                    Check Availability
-                </button>
+                @auth
+
+                    <button class="btn btn-warning w-100">
+                        Check Availability
+                    </button>
+
+                @else
+
+                    <a href="{{ route('login') }}"
+                    class="btn btn-warning w-100">
+                        Login First
+                    </a>
+
+                @endauth
             </div>
 
         </form>

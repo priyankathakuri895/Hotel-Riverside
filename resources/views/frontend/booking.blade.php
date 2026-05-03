@@ -34,7 +34,7 @@
                         @endif
 
                                <!-- FORM START -->
-                        <form method="POST" action="/booking">
+                            <form method="POST" action="{{ route('booking.store') }}">
                             @csrf
 
                             <!-- Full Name -->
@@ -97,6 +97,9 @@
                                 <button type="submit" class="btn btn-warning btn-lg px-5">
                                     Confirm Booking
                                 </button>
+                                <a href="{{ route('home') }}" class="btn btn-outline-dark btn-lg px-5">
+                                    Cancel
+                                </a>
                             </div>
 
                         </form> 
