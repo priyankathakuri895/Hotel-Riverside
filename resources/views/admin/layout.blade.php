@@ -98,16 +98,8 @@
     🛏 Rooms
     </a>
 
-    <a href="#">
-        <i class="fas fa-bed"></i> Bookings
-    </a>
-
-    <a href="#">
-        <i class="fas fa-box"></i> Packages
-    </a>
-
-    <a href="#">
-        <i class="fas fa-spa"></i> Facilities
+    <a href="/admin/bookings">
+         <i class="fas fa-calendar-check"></i> Bookings 
     </a>
 
     <a href="#">

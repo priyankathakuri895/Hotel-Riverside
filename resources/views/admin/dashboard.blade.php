@@ -61,7 +61,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-
+        @foreach($bookings as $booking)
         <tr>
             <td>{{ $booking->name }}</td>
             <td>{{ $booking->room_type }}</td>
@@ -102,7 +102,7 @@
 
             </td>
         </tr>
-
+        @endforeach
     </table>
 
 </div>

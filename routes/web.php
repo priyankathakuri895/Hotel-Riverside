@@ -48,6 +48,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/booking/cancel/{id}',
         [BookingController::class, 'cancel'])
         ->name('booking.cancel');
+    
+    // Delete Booking (Admin)
+    Route::delete('/booking/{id}',
+    [AdminController::class, 'delete'])
+    ->name('admin.booking.delete');
 
 });
 

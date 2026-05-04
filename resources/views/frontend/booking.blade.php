@@ -27,53 +27,52 @@
                         <h2 class="text-center mb-4 fw-bold">
                             Booking Form
                         </h2>
+
+                        <!-- ALERTS -->
                         @if(session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
                             </div>
                         @endif
 
-                               <!-- FORM START -->
-                            <form method="POST" action="{{ route('booking.store') }}">
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <!-- FORM -->
+                        <form method="POST" action="{{ route('booking.store') }}">
                             @csrf
 
-                            <!-- Full Name -->
-                            <div class="col-md-6 mb-3">
+                            <div class="mb-3">
                                 <label class="form-label">Full Name</label>
-                                <input name="name" type="text" class="form-control" placeholder="Enter your name">
+                                <input name="name" type="text" class="form-control">
                             </div>
 
-                            <!-- Email -->
-                            <div class="col-md-6 mb-3">
+                            <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input name="email" type="email" class="form-control" placeholder="Enter your email">
+                                <input name="email" type="email" class="form-control">
                             </div>
 
                             <div class="row">
-
-                                <!-- Check In -->
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Check In</label>
                                     <input name="check_in" type="date" class="form-control">
                                 </div>
 
-                                <!-- Check Out -->
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Check Out</label>
                                     <input name="check_out" type="date" class="form-control">
                                 </div>
-
                             </div>
 
                             <div class="row">
-
-                                <!-- Guests -->
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label">Number of Guests</label>
-                                    <input name="guests" type="number" class="form-control" placeholder="Guests">
+                                    <label class="form-label">Guests</label>
+                                    <input name="guests" type="number" class="form-control">
                                 </div>
 
-                                <!-- Room Type -->
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Room Type</label>
                                     <select name="room_type" class="form-select">
@@ -83,27 +82,24 @@
                                         <option>Couple Package</option>
                                     </select>
                                 </div>
-
                             </div>
 
-                            <!-- Special Request -->
                             <div class="mb-3">
                                 <label class="form-label">Special Request</label>
-                                <textarea name="message" class="form-control" rows="4" placeholder="Write something..."></textarea>
+                                <textarea name="message" class="form-control" rows="4"></textarea>
                             </div>
 
-                            <!-- Submit -->
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn btn-warning btn-lg px-5">
                                     Confirm Booking
                                 </button>
+
                                 <a href="{{ route('home') }}" class="btn btn-outline-dark btn-lg px-5">
                                     Cancel
                                 </a>
                             </div>
 
-                        </form> 
-                            <
+                        </form>
 
                     </div>
 
