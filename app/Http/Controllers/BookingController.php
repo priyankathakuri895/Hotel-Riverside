@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\BookingConfirmationMail;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Room;
@@ -59,6 +61,9 @@ class BookingController extends Controller
             'message'   => $validated['message'] ?? null,
             'status'    => 'pending',
         ]);
+        // SEND CONFIRMATION EMAIL
+        Mail::to(Auth::user()->email)
+            ->send(new BookingConfirmationMail($booking));
 
         // 4. MARK ROOM AS UNAVAILABLE
         $room = Room::find($validated['room_id']);

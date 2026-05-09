@@ -33,7 +33,7 @@
                     @foreach($bookings as $booking)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $booking->room_type }}</td>
+                            <td>{{ $booking->room->type ?? 'N/A' }}</td>
                             <td>{{ $booking->check_in }}</td>
                             <td>{{ $booking->check_out }}</td>
                             <td>{{ $booking->guests }}</td>

@@ -33,7 +33,10 @@ Route::view('/facilities', 'frontend.facilities')->name('facilities');
 Route::middleware('auth')->group(function () {
 
     // Booking Page
-    Route::view('/booking', 'frontend.booking')->name('booking');
+        Route::get('/booking',
+    [BookingController::class, 'create'])
+    ->middleware('auth')
+    ->name('booking');
     // Store Booking
     Route::post('/booking',
         [BookingController::class, 'store'])
