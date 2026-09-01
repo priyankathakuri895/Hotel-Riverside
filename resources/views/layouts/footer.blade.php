@@ -1,4 +1,4 @@
-<!-- ================= LUXURY FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
 <footer class="luxury-footer">
 
     <div class="container py-5">
@@ -17,28 +17,54 @@
                     Your premium stay destination with world-class hospitality.
                 </p>
 
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">YT</a>
+                </div>
+
             </div>
 
-            <!-- QUICK LINKS -->
-            <div class="col-lg-2">
+            <!-- PAGES -->
+            <div class="col-lg-2 col-md-4 col-6">
 
-                <h5 class="text-white mb-3">Quick Links</h5>
+                <h5 class="text-white mb-3">Pages</h5>
 
                 <ul class="list-unstyled">
 
-                    <li><a href="/" class="footer-link">Home</a></li>
-                    <li><a href="#rooms" class="footer-link">Rooms</a></li>
-                    <li><a href="#facilities" class="footer-link">Facilities</a></li>
-                    <li><a href="/booking" class="footer-link">Booking</a></li>
+                    <li><a href="{{ route('home') }}" class="footer-link">Home</a></li>
+                    <li><a href="{{ route('about') }}" class="footer-link">About Us</a></li>
+                    <li><a href="{{ route('packages') }}" class="footer-link">Stay</a></li>
+                    <li><a href="{{ route('facilities') }}" class="footer-link">Facilities</a></li>
+                    <li><a href="{{ route('home') }}#gallery" class="footer-link">Gallery</a></li>
+                    <li><a href="{{ route('contact') }}" class="footer-link">Contact</a></li>
 
                 </ul>
 
             </div>
 
-            <!-- CONTACT -->
-            <div class="col-lg-3">
+            <!-- STAY -->
+            <div class="col-lg-2 col-md-4 col-6">
 
-                <h5 class="text-white mb-3">Contact</h5>
+                <h5 class="text-white mb-3">Account</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="{{ route('booking') }}" class="footer-link">Book a Room</a></li>
+                    <li><a href="{{ route('my.bookings') }}" class="footer-link">My Bookings</a></li>
+                    @guest
+                        <li><a href="{{ route('login') }}" class="footer-link">Sign In</a></li>
+                        <li><a href="{{ route('register') }}" class="footer-link">Join Now</a></li>
+                    @endguest
+
+                </ul>
+
+            </div>
+
+            <!-- GET IN TOUCH -->
+            <div class="col-lg-4 col-md-4">
+
+                <h5 class="text-white mb-3">Get In Touch</h5>
 
                 <p class="text-white-50 mb-1">
                     📍 Kathmandu, Nepal
@@ -48,24 +74,19 @@
                     📞 +977 9800000000
                 </p>
 
-                <p class="text-white-50">
+                <p class="text-white-50 mb-4">
                     ✉ info@hotelriverside.com
                 </p>
 
-            </div>
+                <!-- NEWSLETTER (SAMPLE) -->
+                <h6 class="text-white-50 mb-2" style="font-size:13px;">
+                    Sign up now to receive special offers &amp; promotions
+                </h6>
 
-            <!-- SOCIAL -->
-            <div class="col-lg-3">
-
-                <h5 class="text-white mb-3">Follow Us</h5>
-
-                <div class="d-flex gap-3">
-
-                    <a href="#" class="social-icon">FB</a>
-                    <a href="#" class="social-icon">IG</a>
-                    <a href="#" class="social-icon">YT</a>
-
-                </div>
+                <form class="newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="Your email address" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
 
             </div>
 
@@ -88,8 +109,8 @@
 <style>
 
 .luxury-footer{
-    background: #0b0b0b;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    background: var(--footer-bg, #22201B);
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer-link{
@@ -97,17 +118,17 @@
     color: rgba(255,255,255,0.6);
     text-decoration:none;
     margin-bottom:8px;
-    transition:0.3s;
+    transition:0.25s;
 }
 
 .footer-link:hover{
-    color:#c9a24a;
+    color: var(--accent, #7A9471);
     padding-left:5px;
 }
 
 .social-icon{
-    width:40px;
-    height:40px;
+    width:38px;
+    height:38px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -115,13 +136,52 @@
     border-radius:50%;
     color:white;
     text-decoration:none;
-    transition:0.3s;
+    font-size: 12px;
+    transition:0.25s;
 }
 
 .social-icon:hover{
-    background:#c9a24a;
-    color:black;
+    background: var(--accent, #7A9471);
+    border-color: var(--accent, #7A9471);
+    color:#fff;
     transform:translateY(-3px);
+}
+
+/* NEWSLETTER (SAMPLE FORM) */
+.newsletter-form{
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-input{
+    flex: 1;
+    min-width: 0;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.newsletter-input::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+
+.newsletter-btn{
+    border: 2px solid var(--accent, #7A9471);
+    background: var(--accent, #7A9471);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: 0.25s ease;
+}
+
+.newsletter-btn:hover{
+    background: var(--accent-dark, #63795C);
+    border-color: var(--accent-dark, #63795C);
 }
 
 </style>

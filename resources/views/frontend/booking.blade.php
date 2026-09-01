@@ -3,9 +3,11 @@
 @section('content')
 
 <!-- PAGE HEADER -->
-<section class="bg-dark text-white text-center py-5">
+<section class="page-header text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">Book Your Stay</h1>
+        <span class="section-eyebrow">Reserve</span>
+
+        <h1 class="display-4">Book Your Stay</h1>
 
         <p class="lead">
             Reserve your luxury experience at Hotel Riverside.
@@ -14,7 +16,7 @@
 </section>
 
 <!-- BOOKING FORM -->
-<section class="py-5">
+<section class="py-5 bg-white section-pad">
 
     <div class="container">
 
@@ -22,7 +24,7 @@
 
             <div class="col-lg-8">
 
-                <div class="card shadow border-0">
+                <div class="card border-0" style="border-radius:6px; box-shadow:0 15px 35px rgba(0,0,0,0.08);">
 
                     <div class="card-body p-5">
 
@@ -225,7 +227,8 @@
                                 <!-- SUBMIT -->
                                 <button
                                     type="submit"
-                                    class="btn btn-warning btn-lg px-5"
+                                    class="btn-brand"
+                                    style="padding: 12px 40px; font-size: 16px;"
                                 >
                                     Confirm Booking
                                 </button>
@@ -233,7 +236,8 @@
                                 <!-- CANCEL -->
                                 <a
                                     href="{{ route('home') }}"
-                                    class="btn btn-outline-dark btn-lg px-5"
+                                    class="btn-brand-outline ms-2"
+                                    style="padding: 12px 40px; font-size: 16px;"
                                 >
                                     Cancel
                                 </a>

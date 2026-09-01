@@ -3,9 +3,11 @@
 @section('content')
 
 <!-- PAGE HEADER -->
-<section class="bg-dark text-white text-center py-5">
+<section class="page-header text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">Our Facilities & Activities</h1>
+        <span class="section-eyebrow">Experience</span>
+
+        <h1 class="display-4">Our Facilities &amp; Activities</h1>
 
         <p class="lead">
             Experience adventure, culture and nature at Hotel Riverside.
@@ -14,25 +16,29 @@
 </section>
 
 <!-- FACILITIES -->
-<section class="py-5">
+<section class="py-5 bg-white section-pad">
     <div class="container">
+
+        <div class="section-head">
+            <h2>Facilities &amp; Activities</h2>
+            <p>Everything you need for an unforgettable stay in the jungle.</p>
+        </div>
 
         <div class="row g-4">
 
             <!-- Canoeing -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
                         src="/images/canoeing.jpg"
-                        class="card-img-top"
+                        class="feature-img"
                         alt="Canoeing"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Canoeing
                         </h3>
 
@@ -47,18 +53,17 @@
 
             <!-- Jeep Safari -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
                         src="/images/jeep-safari.jpg"
-                        class="card-img-top"
+                        class="feature-img"
                         alt="Jeep Safari"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Jeep Safari
                         </h3>
 
@@ -73,18 +78,17 @@
 
             <!-- Jungle Walk -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
-                        src="/images/jungle-walk.jpg"
-                        class="card-img-top"
+                        src="/images/jungle-safari.jpg"
+                        class="feature-img"
                         alt="Jungle Walk"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Jungle Walk
                         </h3>
 
@@ -99,18 +103,17 @@
 
             <!-- Tharu Dance -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
                         src="/images/tharu-dance.jpg"
-                        class="card-img-top"
+                        class="feature-img"
                         alt="Tharu Dance"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Tharu Cultural Dance
                         </h3>
 
@@ -125,18 +128,17 @@
 
             <!-- Village Tour -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
                         src="/images/village-tour.jpg"
-                        class="card-img-top"
+                        class="feature-img"
                         alt="Village Tour"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Village Tour
                         </h3>
 
@@ -151,18 +153,17 @@
 
             <!-- Riverside Relax -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="facility-card h-100">
 
                     <img
                         src="/images/riverside.jpg"
-                        class="card-img-top"
+                        class="feature-img"
                         alt="Riverside Relax"
-                        style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Riverside Relaxation
                         </h3>
 
@@ -179,5 +180,35 @@
 
     </div>
 </section>
+
+<style>
+.facility-card{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    color: #222;
+}
+.facility-card:hover{
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.feature-img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.feature-body{
+    padding: 20px;
+}
+.feature-body h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.feature-body p{
+    color: var(--grey);
+}
+</style>
 
 @endsection

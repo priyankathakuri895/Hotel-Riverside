@@ -3,9 +3,11 @@
 @section('content')
 
 <!-- PAGE HEADER -->
-<section class="bg-dark text-white text-center py-5">
+<section class="page-header text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">Our Packages</h1>
+        <span class="section-eyebrow">Stay</span>
+
+        <h1 class="display-4">Our Packages</h1>
 
         <p class="lead">
             Choose the perfect package for your stay.
@@ -14,29 +16,34 @@
 </section>
 
 <!-- PACKAGES -->
-<section class="py-5">
+<section class="py-5 bg-white section-pad">
     <div class="container">
+
+        <div class="section-head">
+            <h2>Choose Your Package</h2>
+            <p>Refined comfort and genuine hospitality, crafted for every kind of traveller.</p>
+        </div>
 
         <div class="row g-4">
 
             <!-- PACKAGE 1 -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="package-card h-100">
 
                     <img
-                        src="/images/package1.jpg"
-                        class="card-img-top"
+                        src="/images/room2.jpg"
+                        class="feature-img"
                         alt="Luxury Package"
                         style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Deluxe Package
                         </h3>
 
-                        <h4 class="text-warning mt-3">
+                        <h4 class="price-tag mt-3">
                             $120 / Night
                         </h4>
 
@@ -47,7 +54,7 @@
                             <li>Free WiFi</li>
                         </ul>
 
-                        <a href="/booking" class="btn btn-warning mt-3">
+                        <a href="/booking" class="btn-brand mt-3">
                             Book Now
                         </a>
 
@@ -58,22 +65,22 @@
 
             <!-- PACKAGE 2 -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="package-card h-100">
 
                     <img
-                        src="/images/package2.jpg"
-                        class="card-img-top"
+                        src="/images/riverside.jpg"
+                        class="feature-img"
                         alt="Couple Package"
                         style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Couple Package
                         </h3>
 
-                        <h4 class="text-warning mt-3">
+                        <h4 class="price-tag mt-3">
                             $180 / Night
                         </h4>
 
@@ -84,7 +91,7 @@
                             <li>Free Drinks</li>
                         </ul>
 
-                        <a href="/booking" class="btn btn-warning mt-3">
+                        <a href="/booking" class="btn-brand mt-3">
                             Book Now
                         </a>
 
@@ -95,22 +102,22 @@
 
             <!-- PACKAGE 3 -->
             <div class="col-md-4">
-                <div class="card shadow border-0 h-100">
+                <div class="package-card h-100">
 
                     <img
-                        src="/images/package3.jpg"
-                        class="card-img-top"
+                        src="/images/rhino.jpg"
+                        class="feature-img"
                         alt="Family Package"
                         style="height: 250px; object-fit: cover;"
                     >
 
-                    <div class="card-body text-center">
+                    <div class="feature-body text-center">
 
-                        <h3 class="fw-bold">
+                        <h3>
                             Family Package
                         </h3>
 
-                        <h4 class="text-warning mt-3">
+                        <h4 class="price-tag mt-3">
                             $250 / Night
                         </h4>
 
@@ -121,7 +128,7 @@
                             <li>Swimming Pool</li>
                         </ul>
 
-                        <a href="/booking" class="btn btn-warning mt-3">
+                        <a href="/booking" class="btn-brand mt-3">
                             Book Now
                         </a>
 
@@ -134,5 +141,37 @@
 
     </div>
 </section>
+
+<style>
+.package-card{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    color: #222;
+}
+.package-card:hover{
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.feature-img{
+    width: 100%;
+    display: block;
+}
+.feature-body{
+    padding: 24px;
+}
+.feature-body h3{
+    font-weight: 500;
+}
+.price-tag{
+    color: var(--brand);
+    font-weight: 700;
+}
+.feature-body ul li{
+    color: var(--grey);
+    padding: 3px 0;
+}
+</style>
 
 @endsection

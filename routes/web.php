@@ -24,6 +24,8 @@ Route::view('/packages', 'frontend.packages')->name('packages');
 
 Route::view('/facilities', 'frontend.facilities')->name('facilities');
 
+Route::view('/contact', 'frontend.contact')->name('contact');
+
 /*
 |--------------------------------------------------------------------------
 | BOOKING ROUTE (CUSTOMER LOGIN REQUIRED)
