@@ -40,7 +40,7 @@
                         </span>
                         <div>
                             <h5>Address</h5>
-                            <p>Kathmandu, Nepal</p>
+                            <p>Bharatpur-22, Ghatgain, Bharatpur 44200, Chitwan, Nepal</p>
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@
                         </span>
                         <div>
                             <h5>Phone</h5>
-                            <p><a href="tel:+9779800000000">+977 9800000000</a></p>
+                            <p><a href="tel:+9779845088858">+977 984-5088858</a></p>
                         </div>
                     </div>
 
@@ -130,9 +130,31 @@
 
 <!-- MAP -->
 <section class="section-tint">
-    <div class="map-placeholder">
-        <span>📍 Kathmandu, Nepal</span>
+
+    <div class="map-embed">
+        <iframe
+            src="https://www.google.com/maps?q=Hotel+Riverside+%26+Lodge,Bharatpur-22,Ghatgain,Chitwan,Nepal&z=16&output=embed"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Hotel Riverside & Lodge location map"
+        ></iframe>
     </div>
+
+    <div class="container py-3 text-center">
+        <a
+            href="https://www.google.com/maps/place/hotel+Riverside+%26+Lodge/@27.5693125,84.3629943,17z/data=!4m6!3m5!1s0x3994f1489ab5c567:0xf431b348a4ff7ff1!8m2!3d27.5693638!4d84.3628145!16s%2Fg%2F11z8hgwj65"
+            target="_blank"
+            rel="noopener"
+            class="text-link"
+        >
+            Open in Google Maps &rarr;
+        </a>
+    </div>
+
 </section>
 
 <style>
@@ -201,20 +223,21 @@
     margin-bottom: 6px;
 }
 
-.map-placeholder{
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        linear-gradient(rgba(231,239,226,0.85), rgba(231,239,226,0.85)),
-        url('/images/riverside.jpg');
-    background-size: cover;
-    background-position: center;
-    font-weight: 700;
-    color: var(--brand);
-    font-size: 18px;
-    letter-spacing: 0.5px;
+.map-embed{
+    line-height: 0;
+}
+
+.map-embed iframe{
+    display: block;
+    width: 100%;
+    height: 400px;
+    filter: grayscale(10%) contrast(1.05);
+}
+
+@media(max-width: 768px){
+    .map-embed iframe{
+        height: 280px;
+    }
 }
 
 </style>

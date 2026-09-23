@@ -9,6 +9,37 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <meta name="description" content="Hotel Riverside & Lodge - a riverside jungle resort in Bharatpur, Chitwan, Nepal offering luxury rooms, packages, canoeing, jeep safari and cultural experiences near Chitwan National Park.">
+
+    <!-- Local business structured data (Schema.org Hotel) -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Hotel",
+        "name": "Hotel Riverside & Lodge",
+        "image": "{{ asset('images/hotel.jpg') }}",
+        "telephone": "+977-984-5088858",
+        "priceRange": "$$",
+        "address": {
+            "@@type": "PostalAddress",
+            "streetAddress": "Bharatpur-22, Ghatgain",
+            "addressLocality": "Bharatpur",
+            "postalCode": "44200",
+            "addressRegion": "Bagmati Province",
+            "addressCountry": "NP"
+        },
+        "geo": {
+            "@@type": "GeoCoordinates",
+            "latitude": 27.5693638,
+            "longitude": 84.3628145
+        },
+        "url": "{{ url('/') }}",
+        "sameAs": [
+            "https://www.google.com/maps/place/hotel+Riverside+%26+Lodge/@27.5693125,84.3629943,17z/data=!4m6!3m5!1s0x3994f1489ab5c567:0xf431b348a4ff7ff1!8m2!3d27.5693638!4d84.3628145!16s%2Fg%2F11z8hgwj65"
+        ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
 
@@ -295,7 +326,7 @@ h1, h2, h3, h4, h5, h6{
 <!-- ================= FLOATING CONTACT BUTTONS ================= -->
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/9779800000000?text=Hello%20Hotel%20Riverside%2C%20I%20want%20to%20book%20a%20room"
+<a href="https://wa.me/9779845088858?text=Hello%20Hotel%20Riverside%2C%20I%20want%20to%20book%20a%20room"
    class="float-btn whatsapp"
    target="_blank">
     💬

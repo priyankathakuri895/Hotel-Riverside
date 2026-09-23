@@ -67,11 +67,11 @@
                 <h5 class="text-white mb-3">Get In Touch</h5>
 
                 <p class="text-white-50 mb-1">
-                    📍 Kathmandu, Nepal
+                    📍 Bharatpur-22, Ghatgain, Chitwan
                 </p>
 
                 <p class="text-white-50 mb-1">
-                    📞 +977 9800000000
+                    📞 <a href="tel:+9779845088858" class="footer-link" style="display:inline; margin:0;">+977 984-5088858</a>
                 </p>
 
                 <p class="text-white-50 mb-4">
