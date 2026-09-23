@@ -67,7 +67,13 @@
                 <h5 class="text-white mb-3">Get In Touch</h5>
 
                 <p class="text-white-50 mb-1">
-                    📍 Bharatpur-22, Ghatgain, Chitwan
+                    📍 <a
+                        href="https://www.google.com/maps/place/hotel+Riverside+%26+Lodge/@27.5693125,84.3629943,17z/data=!4m6!3m5!1s0x3994f1489ab5c567:0xf431b348a4ff7ff1!8m2!3d27.5693638!4d84.3628145!16s%2Fg%2F11z8hgwj65"
+                        target="_blank"
+                        rel="noopener"
+                        class="footer-link"
+                        style="display:inline"
+                    >Bharatpur-22, Ghatgain, Chitwan</a>
                 </p>
 
                 <p class="text-white-50 mb-1">

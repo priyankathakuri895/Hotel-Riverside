@@ -133,7 +133,7 @@
 
     <div class="map-embed">
         <iframe
-            src="https://www.google.com/maps?q=Hotel+Riverside+%26+Lodge,Bharatpur-22,Ghatgain,Chitwan,Nepal&z=16&output=embed"
+            src="https://www.google.com/maps?q=27.5693638,84.3628145&z=17&output=embed"
             width="100%"
             height="400"
             style="border:0;"
